@@ -1,0 +1,479 @@
+/* DEFAULT STYLE FOR OVERALL PAGE */
+* { 
+    margin: 0; 
+    padding: 0; 
+    text-decoration: none;
+    font-family: "Open Sans", sans-serif;
+    color: inherit; 
+}
+body{
+    background: linear-gradient(90deg, #e6e6ff 0%, #ffe6ff 100%);
+    margin: 80px 25px 0px;
+}
+
+h1{
+    font-family: Playfair Display, serif;
+    font-size: 46px;
+    line-height: 50px;
+    margin-bottom: 15px;
+    hyphens: manual;
+}
+td, h2, .github-projects > a{
+    font-family: JetBrains Mono, monospace;
+    font-size: 20px;
+}
+
+img, iframe {
+    border-radius: 20px;
+    margin: 5px 0;
+    width: 100%;
+}
+
+.no-radius {
+    border-radius: 0;
+}
+
+
+table, td {
+    padding: 10px 0;
+    vertical-align: top;
+}
+
+.body-contacts {
+    margin: 30% 10%;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* HEADER DESIGN */
+header{
+    /* HEADER DESIGN DO NOT CHANGE */
+    color: whitesmoke;
+    background: linear-gradient(90deg, #000064aa 0%, #640064aa 100%);
+    backdrop-filter: blur(20px);
+    position: fixed;
+    top: 0; left: 0;
+    width: calc(100% - 50px);
+    white-space: nowrap;
+    z-index: 1000;
+    padding: 10px 25px 16px;
+}
+header .logo-n-menubutton {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+header .material-symbols-outlined {
+    line-height: 1.5;
+    cursor: pointer;
+}
+header a{
+    font-family: Playfair Display, serif;
+    font-size: 30px;
+}
+
+
+nav {
+    /* ANIMATION */
+    overflow: hidden;
+    height: 0;
+    transition: max-height;
+}
+nav a {
+    font-family: Open Sans, sans-serif;
+    font-size: 16px;
+    display: block;
+    text-align: center;
+    padding: 10px 0px;
+    margin: 5px 2px;
+    border: 1px solid grey;
+    border-radius: 15px;
+    transition: 0.4s;
+}
+.nav-margintop{ margin-top: 20px; }
+.nav-marginbottom{ margin-bottom: 10px; }
+
+.creative::after{ content: 'Creative Portfolio'; }
+.technical::after{ content: 'Technical Portfolio'; }
+.awards::after{ content: 'Experiences & Awards'; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* min-width: what happen if screen exceeds px value */
+@media only screen and (min-width: 740px) {
+    h1{
+        /* font-family: Playfair Display, serif; */
+        font-size: 60px;
+        line-height: 60px;
+        /* margin-bottom: 30px; */
+        /* hyphens: manual; */
+    }
+    body {margin: 100px 10% 0px;}
+    header { 
+        display: flex;
+        justify-content: space-between; 
+    }
+    header .material-symbols-outlined { display: none; }
+    nav {
+        overflow: visible;
+        height: auto;
+        transition: none;
+    }
+    nav a {
+        display: inline-block;
+        padding: 3px 8px;
+        margin-bottom: 0;
+        font-size: 12px;
+    }
+    .nav-margintop{ margin-top: 11px; }
+    .nav-marginbottom{ margin-bottom: 0px; }
+    nav a:hover{ background-color: #640064; }
+    nav a:active { box-shadow: 0 5px 5px 0 rgba(0,0,0,0.24); }
+    .creative::after{ content: 'Creative'; }
+    .technical::after{ content: 'Technical'; }
+    .awards::after{ content: 'Experiences'; }
+
+    
+    
+    
+    
+    footer {
+        display: flex;
+        justify-content: space-between;
+    }
+    footer p.le { margin-left: 10%; }
+    footer p.ri { margin-right: 10%; }
+
+
+
+
+
+    .about-blog-tech {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .marginright-technical { margin-right: 20px; }
+    .marginright-awards { margin-right: 5%; }
+
+
+    .yt-flex {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .body-contacts {
+        margin: 20% 25% 0;
+        text-align: center;
+    }
+
+}
+
+@media only screen and (min-width: 900px) {
+    .creative::after{ content: 'Creative Portfolio'; }
+    .technical::after{ content: 'Technical Portfolio'; }
+    .awards::after{ content: 'Experiences & Awards'; }
+
+    .about-blog {
+        display: flex;
+        justify-content: space-between;
+    }
+    .marginright { margin-right: 5%; }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FOOTER DESIGN */
+footer {
+    padding: 10px 0;
+    margin-top: 15px;
+    background: linear-gradient(90deg, #000064 0%, #640064 100%);
+    color: whitesmoke;
+    text-align: center;
+    font-size: 10px;
+    left: 0;
+    width: 100%;
+
+    position: absolute;
+    bottom: auto;
+}
+.sticky-footer > footer {
+    position: fixed;
+    bottom: 0;
+}
+
+
+@media only screen and (min-width: 1024px) {
+    nav a {
+        padding: 5px 12px;
+        font-size: 14px;
+        margin: 5px 2px;
+    }
+    .nav-margintop{ margin-top: 8px; }
+    .footer-adapt > footer{
+        position: absolute;
+        bottom: auto;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* MY-BUTTON DESIGN */
+
+my-button {
+    display: inline-block;
+    background-color: #ff00ff;
+    color: whitesmoke;
+    transition-duration: .4s;
+    padding: 6px 20px 10px;
+    margin-top: 10px;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-right: 5px;
+    user-select: none;
+}
+my-button:hover { 
+    /* background-color: #640064;  */
+    background-color: rgba(100, 0, 100, 1);
+    border-radius: 10px;
+    box-shadow: 0 5px 5px 0 #0000003d;
+    
+}
+my-button:active { 
+    box-shadow: 0 0px 0px 0 #0000003d;
+    transform: translateY(3px);
+    transition-duration: .2s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+label {
+    font-family: JetBrains Mono, monospace;
+    font-size: 20px;
+    padding-right: 5px;
+    cursor: pointer;
+}
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 1, 'wght' 600, 'GRAD' 0, 'opsz' 24;
+    /* padding: 0 5px; */
+    font-size: 10px;
+    position: relative;
+    top: 5px;
+}
+.non-filled {
+    font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+}
+.fa-brands, .fa-solid {
+    font-size: 20px;
+    margin-right: 6px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* PRESET & IMAGE DESIGN */
+#image1{
+    height: 80%;
+    margin-left: 50%;
+    margin-top: 10%;
+    position: absolute;
+    /* white-space: nowrap; */
+}
+.image3{
+    margin: 10px 0;
+    max-width: 100%;
+    box-shadow: 0 5px 5px 0 rgba(0,0,0,0.24);
+    border: 1px solid grey;
+    height: 400px; object-fit: cover;
+}
+#image4 {
+    width: 250px;
+    filter: invert();
+}
+#image5 {
+    margin-top: 20px;
+    width: 300px;
+    height: 500px;
+    object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* https://stackoverflow.com/questions/59594737/how-can-i-resize-the-interface-of-the-iframe-youtube-video */
+
+.about-blog p{
+    padding-bottom: 10px;
+    text-align: justify;
+}
+
+
+
+
+
+/* FROM ABOUT PAGE */
+table img {
+    height: 50px;
+    margin-right: 20px;
+    /* overriding from preset above */
+    width: auto;
+    border-radius: 0;
+}
+table .material-symbols-outlined{
+    color: #640064;
+    font-size: 30px;
+}
+table .filled {
+    font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+
+
+
+
+.github-projects {
+    border: 3px solid #000064;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    padding: 14px 17px;
+}
+.github-projects img {
+    height: 180px; object-fit: cover;
+}
+.no-crop img {
+    height: auto; object-fit: unset;
+}
+
+.index-button-padding{
+    padding: 10px 0;
+}
+
+.smaller{
+    padding-top: 1px;
+    font-size: 10px;
+}
+
+
+
+
+/*THAT'S ALL FOR TONIGHT BYEEEEEEEEE; 17/11/2023*/
+
+
+
+
+h3 {
+    padding: 3px 10px;
+    margin-top: 1px;
+    border-radius: 20px;
+    background-color: #640064;
+    color: whitesmoke;
+    font-size: 16px;
+    text-align: right;
+    font-family: JetBrains Mono, monospace;
+}
+table.exp p {
+    padding-left: 7px;
+}
+
+table.edu h3 {
+    background-color: #000064;
+    text-align: left;
+    display: inline-block;
+}
+table.edu p{
+    padding: 0 9px;
+}
+
+
+
+
+
+
+.no-justify p {
+    text-align: initial;
+}
+
+
+
+/* I'M DONE ROUGHLY ON ALL PAGES. STOP FOR NOW UNTIL NEED TO CLEAN IT UP ABIT.
+17/11/2023 5:21PM */
