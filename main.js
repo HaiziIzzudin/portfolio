@@ -21,7 +21,7 @@ class MyHeader extends HTMLElement{
     this.innerHTML = `
     <!-- START COPY FROM HERE -->
     
-
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" 
     href="https://fonts.googleapis.com/css?family=Playfair+Display:b|JetBrains+Mono:b|Open+Sans">
