@@ -3,53 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Technical Portfolio | Haizi Izzudin</title>
     <script type="module" src="main.js"></script>
 </head>
 
 <my-header></my-header>
 
 <body>
-    <h1>TECH WORK</h1> 
     
-    <div class="about-blog-tech">
+    <div class="tech-h1-flex">
+        <h1>TECH WORK</h1> 
+        <my-button label="Go to GitHub" icons="open_in_new" link="https://github.com/HaiziIzzudin" opennewtab="true"
+        style="margin: 0 0 10px 0;"></my-button>
+    </div>
+    
+    
 
-        <div class="marginright-technical">
 
-            <div class="github-projects no-crop">
-                <img src="https://github-readme-stats.vercel.app/api/?username=haiziizzudin&count_private=true&theme=tokyonight&showicons=true&hide_border=true&border_radius=0" href="github.com/haiziizzudin" class="no-radius"/>
-                <my-button label="Go to my GitHub" icons="open_in_new" link="https://github.com/HaiziIzzudin" openNewTab="true"></my-button>
+    <div class="tech-gridConfig">
+
+        <div class="tech-container" onclick="deleteLife()">
+            <img src="images/deleteLife.png">
+            <div class="gradient-over">
+                <!-- <my-button label="delete.iziizz.com" icons="open_in_new" link="https://delete.iziizz.com" class="tech-button-adj"></my-button> -->
+                <p>A static web that tests Material Web Components in conjunction of Material Design 3.0.</p>
+                <h2>Delete Life?</h2>
             </div>
-            
-            <div class="github-projects">
-                <img src="images/coding-work.png" class="no-radius">
-                <h2>ffmpeg-parallel</h2>
-                <p>Python script where ffmpeg will broke a video into 2 parts, and encode it simultaneously to their own cpu affinity to avoid system crash, and speed up encoding.</p>
-                <my-button label="View" icons="open_in_new" link="https://github.com/HaiziIzzudin/ffmpeg-parallel" openNewTab="true"></my-button>
+        </div>
+
+
+
+
+
+        <div class="tech-container">
+            <img src="images/ytdlp.png">
+            <div class="gradient-over">
+                <p>Command line interface (CLI), guided walkthrough of using yt-dlp downloader.</p>
+                <h2>ytdlp-guided-cli</h2>
             </div>
-        
         </div>
     
-        <div>
-            <div class="github-projects">
-                <img src="images/coding-work.png" class="no-radius">
-                <h2>ytdlp-guided-cli</h2><p>Command line interface (CLI), guided walkthrough of using yt-dlp downloader.</p>
-                <my-button label="View" icons="open_in_new" link="https://github.com/HaiziIzzudin/ytdlp-guided-cli" openNewTab="true"></my-button>
+    
+        <div class="tech-container">
+            <img src="images/ffparallel.png">
+            <div class="gradient-over">
+                <p>Python script where ffmpeg will broke a video into 2 parts, and encode it simultaneously to their own cpu affinity to avoid system crash, and speed up encoding.</p>
+                <h2>ffmpeg-parallel</h2>
             </div>
+        </div>
+    
         
-            <div class="github-projects">
-                <img src="images/coding-work.png" class="no-radius">
-                <h2>This Website!</h2><p>This website has been made from scratch using HTML, CSS and JavaScript. No website builder used in the making of this website.</p>
-                <my-button label='Watch "The Making Of"' icons="play_circle" link="https://www.google.com" openNewTab="true"></my-button>
+    
+        <div class="tech-container">
+            <img src="images/portfolio.png">
+            <div class="gradient-over">
+                <p>This website has been made from scratch using HTML, CSS and JavaScript. No website builder used in the making of this website.</p>
+                <h2>This Website!</h2>
             </div>
         </div>
 
     </div>
+
     
-    
+
+
 </body>
 
 <my-footer></my-footer>
+
+<script>
+    function deleteLife() {
+        window.open('https://delete.iziizz.com', '_blank');
+    }
+</script>
 
 </html>
 
