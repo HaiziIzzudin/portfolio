@@ -1,41 +1,47 @@
 /* DEFAULT STYLE FOR OVERALL PAGE */
 * { 
-    margin: 0; 
-    padding: 0; 
+    padding: 0;
     text-decoration: none;
-    font-family: "Open Sans", sans-serif;
     color: inherit; 
 }
+
 body{
     background: linear-gradient(90deg, #e6e6ff 0%, #ffe6ff 100%);
-    margin: 80px 25px 0px;
+    /* margin: 80px 25px 0px; */
+    max-width: 800px;
+    margin: 90px auto 20px;
+    padding: 0 20px;
 }
 
-h1{
-    font-family: Playfair Display, serif;
-    font-size: 46px;
-    line-height: 50px;
-    margin-bottom: 15px;
-    hyphens: manual;
-}
+
+
+
+
+
+
+
+
+
+/* DEFAULT TEXT FORMATTING */
+
+p { font-family: 'Open Sans', sans-serif; }
+
+h1 { font-family: Playfair Display, serif; }
+
 td, h2, .github-projects > a{
     font-family: JetBrains Mono, monospace;
-    font-size: 20px;
+    /* font-size: 20px; */
 }
 
 img, iframe {
-    border-radius: 20px;
-    margin: 5px 0;
+    border-radius: 15px;
     width: 100%;
-}
-iframe {
-    margin: 0;
-    height: 250px;
+    height: 200px;
 }
 .yt-flex {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 10px;
 }
 
 .no-radius {
@@ -199,24 +205,22 @@ nav a {
 
 
 /* min-width: what happen if screen exceeds px value */
-@media only screen and (max-width: 570px) {
+@media only screen and (min-width: 600px) {
     .tech-h1-flex {
         display: unset;
         justify-content: unset; 
         align-items: unset;
     }
+    .yt-flex { grid-template-columns: 1fr 1fr; }
 }
 
 
 @media only screen and (min-width: 740px) {
-    h1{
-        /* font-family: Playfair Display, serif; */
+    /* h1{
         font-size: 60px;
         line-height: 60px;
-        /* margin-bottom: 30px; */
-        /* hyphens: manual; */
-    }
-    body {margin: 100px 10% 0px;}
+    } */
+    /* body {margin: 100px 10% 0px;} */
     header { 
         display: flex;
         justify-content: space-between; 
@@ -241,16 +245,6 @@ nav a {
     .technical::after{ content: 'Technical'; }
     .awards::after{ content: 'Experiences'; }
 
-    
-    
-    
-    
-    footer {
-        display: flex;
-        justify-content: space-between;
-    }
-    footer p.le { margin-left: 10%; }
-    footer p.ri { margin-right: 10%; }
 
 
 
@@ -264,7 +258,6 @@ nav a {
     .marginright-awards { margin-right: 5%; }
 
 
-    .yt-flex { grid-template-columns: 1fr 1fr; }
 
     .body-contacts {
         margin: 20% 25% 0;
@@ -312,17 +305,19 @@ nav a {
 
 /* FOOTER DESIGN */
 footer {
-    padding: 10px 0;
-    margin-top: 15px;
+    padding: 10px 10px;
+    margin-top: 20px;
     background: linear-gradient(90deg, #000064 0%, #640064 100%);
     color: whitesmoke;
     text-align: center;
-    font-size: 10px;
     left: 0;
-    width: 100%;
-
+    width: calc(100% - 20px);
+    
     position: absolute;
     bottom: auto;
+    
+    font-family: 'Open Sans', sans-serif;
+    font-size: 8px;
 }
 .always-sticky-footer > footer {
     position: fixed;
@@ -331,15 +326,6 @@ footer {
 
 
 @media only screen and (min-width: 1024px) {
-    nav a {
-        padding: 5px 12px;
-        font-size: 14px;
-        margin: 5px 2px;
-    }
-    .nav-margintop{ margin-top: 8px; }
-    .yt-flex {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
     .sticky-footer > footer {
         position: fixed;
         bottom: 0;
@@ -444,11 +430,15 @@ label {
     /* white-space: nowrap; */
 }
 .image3{
-    margin: 10px 0;
-    max-width: 100%;
+    /* margin: 10px 0; */
+    /* max-width: 100%; */
     box-shadow: 0 5px 5px 0 rgba(0,0,0,0.24);
     border: 1px solid grey;
-    height: 400px; object-fit: cover;
+    max-width: 400px;
+    height: 400px; 
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
 }
 #image4 {
     width: 250px;
@@ -473,7 +463,6 @@ label {
 
 
 
-/* https://stackoverflow.com/questions/59594737/how-can-i-resize-the-interface-of-the-iframe-youtube-video */
 
 .about-blog p{
     padding-bottom: 10px;

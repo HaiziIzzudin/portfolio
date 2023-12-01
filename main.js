@@ -57,8 +57,7 @@ class MyFooter extends HTMLElement{
     connectedCallback() {
     this.innerHTML = `
     <footer id="myFooter">
-        <p class="le">Copyright © Haizi Izzudin (2023). All Rights Reserved.</p>
-        <p class="ri">Problems with website? Email to <a href="mailto:webmaster@iziizz.com">webmaster@iziizz.com</a></p>
+        Copyright © Haizi Izzudin (2023). All Rights Reserved. Problems with website? Email to <a href="mailto:webmaster@iziizz.com">webmaster@iziizz.com</a>
     </footer>
     `
     }
