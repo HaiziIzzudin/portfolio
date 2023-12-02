@@ -18,56 +18,64 @@ scripts.forEach(src => {
 
 class MyHeader extends HTMLElement{
     connectedCallback() {
-    this.innerHTML = `
-    <!-- START COPY FROM HERE -->
-    
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" 
-    href="https://fonts.googleapis.com/css?family=Playfair+Display:b|JetBrains+Mono:b|Open+Sans">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    
-
-
-    
-    <!-- ==================
-    HEADER HTML STARTS HERE
-    =================== -->
-    <header>
-
+        this.innerHTML = `
+        <!-- START COPY FROM HERE -->
+        
+        <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" 
+        href="https://fonts.googleapis.com/css?family=Playfair+Display:b|JetBrains+Mono:b|Open+Sans">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        
+        
+        
+        
+        
+        <!-- ==================
+        HEADER HTML STARTS HERE
+        =================== -->
+        <header>
+        
         <div class="header-margining">
-
-            <div class="logo-n-menubutton">
-
-                <a href="index.html">HAIZI IZZUDIN</a>
-                <span class="material-symbols-outlined">menu</span>
-            
-            </div>
-            
-            <nav>
-                <a href="about.html" class="nav-margintop">About</a>
-                <a href="portfolio-creative.html" class="creative"></a>
-                <a href="portfolio-technical.html" class="technical"></a>
-                <a href="experiences.html" class="awards"></a>
-                <a href="education.html">Education</a>
-                <a href="contacts.html" class="nav-marginbottom">Contacts</a>
-            </nav>    
-
+        
+        <div class="logo-n-menubutton">
+        
+        <a href="index.html">
+            <h1>HAIZI IZZUDIN</h1>
+        </a>
+        <span class="material-symbols-outlined">menu</span>
+        
         </div>
-    </header>
-    <!-- AND PASTE IT INSIDE MAIN.JS ON EVERYTIME HEADER ELEMENT IS UPDATED -->
-    `
+        
+        <nav>
+        <a href="about.html">About</a>
+        <a href="portfolio-creative.html">Creative</a>
+        <a href="portfolio-technical.html">Technical</a>
+        <a href="experiences.html">Experiences</a>
+        <a href="education.html">Education</a>
+        <a href="contacts.html">Contacts</a>
+        </nav>    
+        
+        </div>
+        </header>    
+        <!-- AND PASTE IT INSIDE MAIN.JS ON EVERYTIME HEADER ELEMENT IS UPDATED -->
+        `
     }
+}
+
+function gotoIndex() {
+    window.location.href = 'index.html';
+    console.log('script loaded.')
 }
 
 class MyFooter extends HTMLElement{
     connectedCallback() {
-    this.innerHTML = `
-    <footer id="myFooter">
+        this.innerHTML = `
+        <footer id="myFooter">
         Copyright © Haizi Izzudin (2023). All Rights Reserved. Problems with website? Email to <a href="mailto:webmaster@iziizz.com">webmaster@iziizz.com</a>
-    </footer>
-    `
+        </footer>
+        `
     }
 }
 

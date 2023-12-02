@@ -7,9 +7,8 @@
 
 body{
     background: linear-gradient(90deg, #e6e6ff 0%, #ffe6ff 100%);
-    /* margin: 80px 25px 0px; */
     max-width: 800px;
-    margin: 70px auto 20px;
+    margin: 80px auto 20px;
     padding: 0 20px;
 }
 
@@ -28,20 +27,28 @@ p { font-family: 'Open Sans', sans-serif; }
 
 h1 { font-family: Playfair Display, serif; }
 
-td, h2, .github-projects > a{
+td, h2{
     font-family: JetBrains Mono, monospace;
-    /* font-size: 20px; */
+    font-size: 20px;
 }
+
+
 
 img, iframe {
     border-radius: 15px;
     width: 100%;
     height: 200px;
 }
-.yt-flex {
+
+
+
+
+
+.tech-gridConfig, .yt-flex {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 10px;
+    margin-top: 10px;
 }
 
 .no-radius {
@@ -55,7 +62,7 @@ table, td {
 }
 
 .body-contacts {
-    margin: 30em 10%;
+    margin: 11em auto;
     text-align: center;
 }
 
@@ -73,28 +80,31 @@ table, td {
 header {
     /* HEADER DESIGN DO NOT CHANGE */
     color: whitesmoke;
-    background: linear-gradient(90deg, #000064aa 0%, #640064aa 100%);
-    backdrop-filter: blur(20px);
+    background: linear-gradient(90deg, #000064dd 0%, #640064dd 100%);
+    backdrop-filter: blur(7px);
 
     position: fixed;
     top: 0; left: 0;
     width: calc(100%);
     white-space: nowrap;
     z-index: 1000;
-    /* padding: 10px 25px 16px; */
+}
+header h1 {
+    margin: 0;
+    cursor: pointer;
 }
 .header-margining {
     margin: 0 auto;
     /* display: flex; */
     max-width: 800px;
     padding: 5px 20px 10px;
-    /* justify-content: space-between;  */
+    justify-content: space-between; 
 }
 header .logo-n-menubutton {
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
     justify-content: space-between; 
-    align-items: end;
+    align-items: center;
 }
 header .material-symbols-outlined {
     line-height: 1.6;
@@ -102,10 +112,10 @@ header .material-symbols-outlined {
     padding: 0; margin: 0;
     font-size: 20px;
 }
-header a{
+/* header a{
     font-family: Playfair Display, serif;
     font-size: 25px;
-}
+} */
 
 
 nav {
@@ -125,12 +135,6 @@ nav a {
     border-radius: 15px;
     transition: 0.4s;
 }
-.nav-margintop{ margin-top: 20px; }
-.nav-marginbottom{ margin-bottom: 10px; }
-
-.creative::after{ content: 'Creative Portfolio'; }
-.technical::after{ content: 'Technical Portfolio'; }
-.awards::after{ content: 'Experiences & Awards'; }
 
 
 
@@ -177,17 +181,13 @@ nav a {
     flex-direction: column-reverse;
 }
 .tech-container h2, .tech-container p {
+    margin: 0;
     padding: 0 25px;
 }
 .tech-container p {
     padding-bottom: 25px;
 }
 
-.tech-gridConfig {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-}
 
 .tech-h1-flex {
     display: flex;
@@ -215,60 +215,39 @@ nav a {
 
 
 
-/* min-width: what happen if screen exceeds px value */
-@media only screen and (min-width: 600px) {
+
+@media only screen and (max-width: 600px) {
     .tech-h1-flex {
         display: unset;
         justify-content: unset; 
         align-items: unset;
     }
-    .yt-flex { grid-template-columns: 1fr 1fr; }
+    .tech-gridConfig, .yt-flex { 
+        grid-template-columns: 1fr; }
 }
 
 
-@media only screen and (min-width: 740px) {
-    header { 
-        display: flex;
-        justify-content: space-between; 
-    }
-    header .material-symbols-outlined { display: none; }
-    nav {
-        overflow: visible;
-        height: auto;
-        transition: none;
-    }
-    nav a {
-        display: inline-block;
-        padding: 3px 8px;
-        margin-bottom: 0;
-        font-size: 12px;
-    }
-    .nav-margintop{ margin-top: 11px; }
-    .nav-marginbottom{ margin-bottom: 0px; }
-    nav a:hover{ background-color: #640064; }
-    nav a:active { box-shadow: 0 5px 5px 0 rgba(0,0,0,0.24); }
-    .creative::after{ content: 'Creative'; }
-    .technical::after{ content: 'Technical'; }
-    .awards::after{ content: 'Experiences'; }
 
 
 
 
 
+
+
+
+@media only screen and (min-width: 700px) {
+    /* nav a:hover{ background-color: #640064; }
+    nav a:active { box-shadow: 0 5px 5px 0 rgba(0,0,0,0.24); } */
 
     .about-blog-tech {
         display: flex;
         justify-content: space-evenly;
     }
-    .marginright-technical { margin-right: 20px; }
-    .marginright-awards { margin-right: 5%; }
 
-
-
-    .body-contacts {
+    /* .body-contacts {
         margin: 20% 25% 0;
         text-align: center;
-    }
+    } */
     
 }
 
@@ -287,11 +266,7 @@ nav a {
         display: flex;
         justify-content: space-between;
     }
-    .marginright { margin-right: 5%; }
 
-    .tech-gridConfig {
-        grid-template-columns: 1fr 1fr;
-    }
 }
 
 
@@ -331,12 +306,6 @@ footer {
 }
 
 
-@media only screen and (min-width: 1024px) {
-    .sticky-footer > footer {
-        position: fixed;
-        bottom: 0;
-    }
-}
 
 
 
@@ -364,7 +333,7 @@ my-button {
 }
 my-button:hover { 
     /* background-color: #640064;  */
-    background-color: rgba(100, 0, 100, 1);
+    background-color: rgba(100, 0, 100);
     border-radius: 10px;
     box-shadow: 0 5px 5px 0 #0000003d;
     
@@ -379,6 +348,43 @@ my-button:active {
 
 
 
+
+
+
+
+
+
+
+/* BUTTON SEMANTIC TAG DESIGN */
+
+button {
+    background-color: #ff00ff;
+    color: whitesmoke;
+    border: unset;
+    padding: 6px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition-duration: 0.3s;
+
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 16px;
+
+    white-space: nowrap;
+}
+button .material-symbols-outlined {
+    font-size: 16px;
+    position: relative;
+    bottom: -2px;
+}
+button:hover {
+    box-shadow: 0px 2px 8px 0px #888888;
+    border-radius: 10px;
+    background-color: #640064;
+}
+button:active {
+    box-shadow: 0px 0px 0px 0px #888888;
+    transform: translateY(3px);
+}
 
 
 
@@ -446,13 +452,15 @@ label {
 }
 #image4 {
     width: 250px;
+    height: auto;
     filter: invert();
 }
 #image5 {
-    margin-top: 20px;
-    width: 300px;
-    height: 500px;
+    width: 400px;
+    height: 400px;
     object-fit: cover;
+    display: block;
+    margin: 20px auto;
 }
 
 
@@ -529,7 +537,7 @@ table .filled {
 
 h3 {
     padding: 3px 10px;
-    margin-top: 1px;
+    margin: 0;
     border-radius: 20px;
     background-color: #640064;
     color: whitesmoke;
@@ -539,6 +547,7 @@ h3 {
 }
 table.exp p {
     padding-left: 7px;
+    margin: 0;
 }
 
 table.edu h3 {
@@ -548,6 +557,7 @@ table.edu h3 {
 }
 table.edu p{
     padding: 0 9px;
+    margin: 0;
 }
 
 

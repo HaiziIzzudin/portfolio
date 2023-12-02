@@ -7,14 +7,16 @@
     <script type="module" src="main.js"></script>
 </head>
 
-<my-header></my-header>
-
 <body>
+
+    <my-header></my-header>
     
     <div class="tech-h1-flex">
         <h1>TECH WORK</h1> 
-        <my-button label="Go to GitHub" icons="open_in_new" link="https://github.com/HaiziIzzudin" opennewtab="true"
-        style="margin: 0 0 10px 0;"></my-button>
+        <button onclick="window.open('https://github.com/haiziizzudin', '_blank')">
+            GO TO MY GITHUB
+            <span class="material-symbols-outlined">open_in_new</span>
+        </button>
     </div>
     
     
@@ -22,6 +24,9 @@
 
     <div class="tech-gridConfig">
 
+
+
+        
         <div class="tech-container" onclick="deleteLife()">
             <img src="images/deleteLife.png">
             <div class="gradient-over">
