@@ -35,18 +35,26 @@ class MyHeader extends HTMLElement{
     HEADER HTML STARTS HERE
     =================== -->
     <header>
-        <div class="logo-n-menubutton">
-            <a href="index.html">HAIZI IZZUDIN</a>
-            <span class="material-symbols-outlined">menu</span>
+
+        <div class="header-margining">
+
+            <div class="logo-n-menubutton">
+
+                <a href="index.html">HAIZI IZZUDIN</a>
+                <span class="material-symbols-outlined">menu</span>
+            
+            </div>
+            
+            <nav>
+                <a href="about.html" class="nav-margintop">About</a>
+                <a href="portfolio-creative.html" class="creative"></a>
+                <a href="portfolio-technical.html" class="technical"></a>
+                <a href="experiences.html" class="awards"></a>
+                <a href="education.html">Education</a>
+                <a href="contacts.html" class="nav-marginbottom">Contacts</a>
+            </nav>    
+
         </div>
-        <nav>
-            <a href="about.html" class="nav-margintop">About</a>
-            <a href="portfolio-creative.html" class="creative"></a>
-            <a href="portfolio-technical.html" class="technical"></a>
-            <a href="experiences.html" class="awards"></a>
-            <a href="education.html">Education</a>
-            <a href="contacts.html" class="nav-marginbottom">Contacts</a>
-        </nav>    
     </header>
     <!-- AND PASTE IT INSIDE MAIN.JS ON EVERYTIME HEADER ELEMENT IS UPDATED -->
     `
@@ -70,10 +78,10 @@ class FiveRating extends HTMLElement {
         
         let starsHTML = '';
         for (let i = 0; i < rate; i++) {
-            starsHTML += `<span class="material-symbols-outlined">star</span>`;
+            starsHTML += `<span class="star material-symbols-outlined">star</span>`;
         }
         for (let i = 0; i < (5 - rate); i++) {
-            starsHTML += `<span class="material-symbols-outlined non-filled">star</span>`;
+            starsHTML += `<span class="star material-symbols-outlined non-filled">star</span>`;
         }
         this.innerHTML = starsHTML;
     }
