@@ -7,22 +7,44 @@
     <script type="module" src="main.js"></script>
 </head>
 
-<my-header></my-header>
 
 <body class="body-contacts">
+
+    <my-header></my-header>
+    
     <h1>LET'S CONNECT</h1>
 
-    <my-button label="E-mail" icons="fa-solid fa-envelope" isSocMed="true" openNewTab="true" link="mailto:hello@iziizz.com" style="background: #864500;"></my-button>
-    
-    <my-button label="YouTube" icons="fa-brands fa-youtube" isSocMed=true openNewTab="true" link="https://youtube.com/@haiziizzudin" style="background: #f00;"></my-button>
+    <button onclick="window.open('mailto:hi@iziizz.com', '_blank')" style="background: #864500;">
+        <span class="material-symbols-outlined">mail</span>
+        E-mail
+    </button>
 
-    <my-button label="Instagram" icons="fa-brands fa-instagram" isSocMed=true openNewTab="true" link="https://instagram.com" style="background: linear-gradient(90deg, #f0c733 0%, #ee2a7b 50%, #6228d7 100%);"></my-button>
+    <button onclick="window.open('https://youtube.com/@haiziizzudin', '_blank')" style="background: #f00;">
+        <span class="fa-brands fa-youtube"></span>
+        YouTube
+    </button>
 
-    <my-button label="TikTok" icons="fa-brands fa-tiktok" isSocMed=true openNewTab="true" link="https://tiktok.com" style="background: #000;"></my-button>
+    <button onclick="window.open('https://instagram.com', '_blank')" style="background: linear-gradient(90deg, #f0c733 0%, #ee2a7b 50%, #6228d7 100%);">
+        <span class="fa-brands fa-instagram"></span>
+        Instagram
+    </button>
 
-    <my-button label="Mastodon" icons="fa-brands fa-mastodon" isSocMed=true openNewTab="true" link="https://social.mastodon.my" style="background: #563aac;"></my-button>
+    <button onclick="window.open('https://tiktok.com', '_blank')" style="background: #000;">
+        <span class="fa-brands fa-tiktok"></span>
+        TikTok
+    </button>
 
-    <my-button label="LinkedIn" icons="fa-brands fa-linkedin" isSocMed=true openNewTab="true" link="https://linkedin.com" style="background: #0a66c2;"></my-button>
+    <button onclick="window.open('https://social.mastodon.my', '_blank')" style="background: #563aac;">
+        <span class="fa-brands fa-mastodon"></span>
+        Mastodon
+    </button>
+
+    <button onclick="window.open('https://linkedin.com', '_blank')" style="background: #0a66c2;">
+        <span class="fa-brands fa-linkedin"></span>
+        LinkedIn
+    </button>
+
+
 </body>
 
 <my-footer class="always-sticky-footer"></my-footer>

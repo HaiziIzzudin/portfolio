@@ -2,13 +2,13 @@ const scripts = [
     'https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js',
     'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js'
 ];
-   
+
 scripts.forEach(src => {
     const script = document.createElement('script');
     script.src = src;
     document.head.append(script);
 });
-   
+
 
 
 
@@ -39,23 +39,16 @@ class MyHeader extends HTMLElement{
         
         <div class="header-margining">
         
-        <div class="logo-n-menubutton">
-        
-        <a href="index.html">
-            <h1>HAIZI IZZUDIN</h1>
-        </a>
-        <span class="material-symbols-outlined">menu</span>
-        
-        </div>
-        
-        <nav>
-        <a href="about.html">About</a>
-        <a href="portfolio-creative.html">Creative</a>
-        <a href="portfolio-technical.html">Technical</a>
-        <a href="experiences.html">Experiences</a>
-        <a href="education.html">Education</a>
-        <a href="contacts.html">Contacts</a>
-        </nav>    
+            <a href="index.html"><h6>HAIZI IZZUDIN</h6></a>
+            
+            <nav>
+                <a href="about.html">About</a>
+                <a href="portfolio-creative.html">Creative</a>
+                <a href="portfolio-technical.html">Technical</a>
+                <a href="experiences.html">Experiences</a>
+                <a href="education.html">Education</a>
+                <a href="contacts.html">Contacts</a>
+            </nav>    
         
         </div>
         </header>    
@@ -64,10 +57,7 @@ class MyHeader extends HTMLElement{
     }
 }
 
-function gotoIndex() {
-    window.location.href = 'index.html';
-    console.log('script loaded.')
-}
+
 
 class MyFooter extends HTMLElement{
     connectedCallback() {
@@ -154,19 +144,19 @@ customElements.define ('my-button', MyButton)
 
 // HEADER ANIMATION
 
-const clickableElement = document.querySelector('.material-symbols-outlined');
-const menuExpanded = document.querySelector('nav');
+// const clickableElement = document.querySelector('.material-symbols-outlined');
+// const menuExpanded = document.querySelector('nav');
 
 
-clickableElement.addEventListener('click', function () {
-    const isOpen = menuExpanded.classList.contains('open');
-    if (isOpen) {
-        gsap.to(menuExpanded, { height: 0});
-        menuExpanded.classList.remove('open');
-    } else {
-        gsap.to(menuExpanded, { height: 'auto'});
-        menuExpanded.classList.add('open');
-    }
-});
+// clickableElement.addEventListener('click', function () {
+//     const isOpen = menuExpanded.classList.contains('open');
+//     if (isOpen) {
+//         gsap.to(menuExpanded, { height: 0});
+//         menuExpanded.classList.remove('open');
+//     } else {
+//         gsap.to(menuExpanded, { height: 'auto'});
+//         menuExpanded.classList.add('open');
+//     }
+// });
 
 
