@@ -37,6 +37,9 @@ h6 {
     font-size: 32px;
     font-family: Playfair Display;
 }
+h6::after {
+    content: "AIZI IZZUDIN";
+}
 
 
 
@@ -466,11 +469,11 @@ nav a {
     font-size: 12px;
     text-align: center;
     
-    padding: 4px 8px; 
+    padding: 4px 10px; 
     margin: 2.5px 0px;
     
     border: 1px solid grey;
-    border-radius: 10px;
+    border-radius: 20px;
 
     position: relative;
     bottom: -2px;
@@ -486,18 +489,36 @@ nav a {
 
 
 
+@media only screen and (max-width: 550px) {
+    .tech-gridConfig, .yt-flex { 
+        grid-template-columns: 1fr; }
+}
 
 
 
-@media only screen and (max-width: 718px) {
+
+
+
+
+@media only screen and (max-width: 750px) {
 
 
 
 
 
     body {
-        margin: 140px auto 20px;
+        margin: 90px auto 20px;
     }
+    h6 {
+        /* font-size: 40px; */
+        margin-right: 10px;
+    }
+    h6::after {
+        content: ".I.";
+    }
+
+
+
 
 
 
@@ -507,8 +528,6 @@ nav a {
         justify-content: unset; 
         align-items: unset;
     }
-    .tech-gridConfig, .yt-flex { 
-        grid-template-columns: 1fr; }
 
 
 
@@ -520,27 +539,16 @@ nav a {
 
     header {
         /* margin: 0 auto; */
-        display: unset;
+        /* display: unset; */
         /* max-width: 800px; */
-        padding: 5px 20px 10px;
-        /* justify-content: space-between;  */
+        justify-content: space-between; 
         /* align-items: center; */
-        text-align: center;
+        text-align: right;
         white-space: normal;
         width: calc(100% - 40px);
     }
 
     nav a {
-        display: inline-block;
-        
-        font-family: 'Open Sans', sans-serif;
-        font-size: 14px;
-        text-align: center;
-        
-        padding: 5px 15px; 
         margin: 2.5px 0;
-        
-        border: 1px solid grey;
-        border-radius: 10px;
     }
 }

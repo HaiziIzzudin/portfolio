@@ -37,7 +37,7 @@ class MyHeader extends HTMLElement{
         =================== -->
         <header>
                 
-            <a href="index.html"><h6>HAIZI IZZUDIN</h6></a>
+            <a href="index.html"><h6>H</h6></a>
             
             <nav>
                 <a href="about.html">About</a>
