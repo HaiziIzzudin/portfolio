@@ -8,7 +8,7 @@
 body{
     background: linear-gradient(90deg, #e6e6ff 0%, #ffe6ff 100%);
     max-width: 800px;
-    margin: 150px auto 20px;
+    margin: 80px auto 20px;
     padding: 0 20px;
 }
 
@@ -85,33 +85,7 @@ table, td {
 
 
 
-/* HEADER DESIGN */
-header {
-    /* HEADER POSITIONING ON CANVAS DO NOT CHANGE */
-    color: whitesmoke;
-    background: linear-gradient(90deg, #000064dd 0%, #640064dd 100%);
-    backdrop-filter: blur(7px);
 
-    position: fixed;
-    top: 0; left: 0;
-    width: calc(100%);
-    white-space: nowrap;
-    z-index: 1000;
-}
-
-nav a {
-    display: inline-block;
-    
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
-    text-align: center;
-    
-    padding: 5px 15px; 
-    margin: 2.5px 0;
-    
-    border: 1px solid grey;
-    border-radius: 10px;
-}
 
 
 
@@ -463,7 +437,71 @@ table.edu p{
 
 
 
-@media only screen and (max-width: 600px) {
+/* HEADER DESIGN */
+header {
+    /* HEADER POSITIONING ON CANVAS DO NOT CHANGE */
+    position: fixed;
+    top: 0; left: 0;
+    width: calc(100% - 40px);
+    z-index: 1000;
+    
+    /* HEADER DESIGN COLORS DO NOT CHANGE */
+    color: whitesmoke;
+    background: linear-gradient(90deg, #000064dd 0%, #640064dd 100%);
+    backdrop-filter: blur(7px);
+    white-space: nowrap;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    padding: 5px 20px 10px;
+}
+
+nav a {
+    display: inline-block;
+    
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    text-align: center;
+    
+    padding: 4px 8px; 
+    margin: 2.5px 0px;
+    
+    border: 1px solid grey;
+    border-radius: 10px;
+
+    position: relative;
+    bottom: -2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 718px) {
+
+
+
+
+
+    body {
+        margin: 140px auto 20px;
+    }
+
+
+
+
     .tech-h1-flex {
         display: unset;
         justify-content: unset; 
@@ -472,14 +510,37 @@ table.edu p{
     .tech-gridConfig, .yt-flex { 
         grid-template-columns: 1fr; }
 
-    .header-margining {
+
+
+
+
+
+
+
+
+    header {
         /* margin: 0 auto; */
-        /* display: flex; */
+        display: unset;
         /* max-width: 800px; */
         padding: 5px 20px 10px;
         /* justify-content: space-between;  */
         /* align-items: center; */
         text-align: center;
         white-space: normal;
+        width: calc(100% - 40px);
+    }
+
+    nav a {
+        display: inline-block;
+        
+        font-family: 'Open Sans', sans-serif;
+        font-size: 14px;
+        text-align: center;
+        
+        padding: 5px 15px; 
+        margin: 2.5px 0;
+        
+        border: 1px solid grey;
+        border-radius: 10px;
     }
 }

@@ -36,9 +36,7 @@ class MyHeader extends HTMLElement{
         HEADER HTML STARTS HERE
         =================== -->
         <header>
-        
-        <div class="header-margining">
-        
+                
             <a href="index.html"><h6>HAIZI IZZUDIN</h6></a>
             
             <nav>
@@ -50,7 +48,6 @@ class MyHeader extends HTMLElement{
                 <a href="contacts.html">Contacts</a>
             </nav>    
         
-        </div>
         </header>    
         <!-- AND PASTE IT INSIDE MAIN.JS ON EVERYTIME HEADER ELEMENT IS UPDATED -->
         `
