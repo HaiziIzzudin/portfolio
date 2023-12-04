@@ -36,17 +36,20 @@ class MyHeader extends HTMLElement{
         HEADER HTML STARTS HERE
         =================== -->
         <header>
-                
-            <a href="index.html"><h6>H</h6></a>
             
-            <nav>
-                <a href="about.html">About</a>
-                <a href="portfolio-creative.html">Creative</a>
-                <a href="portfolio-technical.html">Technical</a>
-                <a href="experiences.html">Experiences</a>
-                <a href="education.html">Education</a>
-                <a href="contacts.html">Contacts</a>
-            </nav>    
+            <div class="header-max-width">
+                <a href="index.html"><h6>H</h6></a>
+                
+                <nav>
+                    <a href="about.html">About</a>
+                    <a href="portfolio-creative.html">Creative</a>
+                    <a href="portfolio-technical.html">Technical</a>
+                    <a href="experiences.html">Experiences</a>
+                    <a href="education.html">Education</a>
+                    <a href="contacts.html">Contacts</a>
+                </nav>    
+            
+            </div>
         
         </header>    
         <!-- AND PASTE IT INSIDE MAIN.JS ON EVERYTIME HEADER ELEMENT IS UPDATED -->

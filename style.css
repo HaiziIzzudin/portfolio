@@ -3,6 +3,14 @@
     --dark-gradient: linear-gradient(90deg, #000064 0%, #640064 100%);
     --dark-gradient-trnsprnt: linear-gradient(90deg, #000064dd 0%, #640064dd 100%);
     --light-gradient: linear-gradient(90deg, #e6e6ff 0%, #ffe6ff 100%);
+    --gradient-overlay: linear-gradient(5deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.66) 20%, rgba(0,0,0,0.33) 40%, rgba(0,0,0,0) 60%);
+    --shadow: 0px 2px 8px 0px #000000aa;
+    --set-margin: 0 auto;
+    --set-margin-top: 80px;
+    --set-padding: 0 20px;
+    --round-corners: 15px;
+    --device-width: 1024px;
+    --border-typ: 1px solid grey;
 }
 
 
@@ -13,38 +21,75 @@
     text-decoration: none;
 }
 
-body{
-    background: var(--light-gradient);
-    max-width: 800px;
-    margin: 80px auto 20px;
-    padding: 0 20px;
-}
+body { margin: 0; }
 
-
-
-
-
-
-
-
-
-/* INDEX DESIGN */
-
-.bodyOfIndex {
+.body-index {
     background: var(--dark-gradient);
     color: whitesmoke;
-    margin: 15% auto 20px;
 }
-.bodyOfIndex button {
-    position: normal;
+
+main {
+    max-width: var(--device-width);
+    margin: var(--set-margin);
+    margin-top: var(--set-margin-top);
+    margin-bottom: calc(var(--set-margin-top) / 2);
+    padding: var(--set-padding);
 }
-.bodyOfIndex img{
-    display: block;
+.main-index {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10em;
+}
+
+.body-others {
+    background: var(--light-gradient);
+}
+
+.compass {
     position: fixed;
-    right: 5%;
-    bottom: -80px;
-    width: 600px;
+    z-index: -1;
+    top: -1400px;
+    left: -600px;
+    opacity: .2;
+    animation: compassSpin 100s linear infinite;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SPESIFIC ABOUT PAGE */
+.main-about {
+    display: flex;
+}
+.main-about div {
+    margin: 0 10px;
+}
+.about-image{
+    border-radius: var(--round-corners);
+    box-shadow: var(--shadow);
+    border: var(--border-typ);
+
+    width: 300px;
+    height: 300px; 
+    object-fit: cover;
+    
+    display: block;
+    margin: var(--set-margin);
+}
+
+
+
+
 
 
 
@@ -63,12 +108,12 @@ h1 { font-family: Playfair Display, serif; }
 
 td, h2{
     font-family: JetBrains Mono, monospace;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 h6 {
     margin: 0;
-    font-size: 32px;
+    font-size: 35px;
     font-family: Playfair Display;
 }
 h6::after {
@@ -77,7 +122,7 @@ h6::after {
 
 
 iframe {
-    border-radius: 15px;
+    border-radius: var(--round-corners);
     width: 100%;
     height: 200px;
 }
@@ -93,11 +138,6 @@ iframe {
     gap: 10px;
     margin-top: 10px;
 }
-
-.no-radius {
-    border-radius: 0;
-}
-
 
 table, td {
     padding: 10px 0;
@@ -145,15 +185,14 @@ table, td {
 
 .tech-container {
     position: relative;
-    border-radius: 20px;
+    border-radius: var(--round-corners);
     overflow: hidden;
     cursor: pointer;
 }
 .tech-container img{
-    border-radius: 0;
     height: 320px;
+    width: 100%;
     object-fit: cover;
-    margin: 0;
     display: block;
 }
 .gradient-over {
@@ -164,7 +203,7 @@ table, td {
     z-index: 3;
     color: whitesmoke;
     margin: 0;
-    background: linear-gradient(5deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.66) 20%, rgba(0,0,0,0.33) 40%, rgba(0,0,0,0) 60%);
+    background: var(--gradient-overlay);
     display: flex; 
     flex-direction: column-reverse;
 }
@@ -204,7 +243,7 @@ table, td {
 /* FOOTER DESIGN */
 footer {
     padding: 5px;
-    margin-top: 20px;
+    /* margin-top: 20px; */
     background: var(--dark-gradient);
     color: whitesmoke;
     text-align: center;
@@ -217,7 +256,7 @@ footer {
     font-family: 'Open Sans', sans-serif;
     font-size: 8px;
 }
-.always-sticky-footer > footer {
+.sticky-footer > footer {
     position: fixed;
     bottom: 0;
 }
@@ -254,7 +293,7 @@ button {
     color: whitesmoke;
     border: unset;
     padding: 8px 18px;
-    border-radius: 30px;
+    border-radius: calc(var(--round-corners) * 2);
     cursor: pointer;
     transition-duration: 0.3s;
 
@@ -270,8 +309,8 @@ button .material-symbols-outlined {
     bottom: -2px;
 }
 button:hover {
-    box-shadow: 0px 2px 8px 0px #000000aa;
-    border-radius: 10px;
+    box-shadow: var(--shadow);
+    border-radius: calc(var(--round-corners) / 2);
     background-color: #640064;
 }
 button:active {
@@ -322,29 +361,16 @@ label {
 
 /* PRESET & IMAGE DESIGN */
 
-
-
-
-
-
-.image3{
-    border-radius: 15px;
-    box-shadow: 0 5px 5px 0 rgba(0,0,0,0.24);
-    border: 1px solid grey;
-    max-width: 400px;
-    height: 400px; 
-    object-fit: cover;
-    display: block;
-    margin: 0 auto;
-}
-#image4 {
-    border-radius: 15px;
+.image4 {
+    border-radius: var(--round-corners);
     width: 250px;
     height: auto;
     filter: invert();
+    display: block;
+    margin: var(--set-margin);
 }
 #image5 {
-    border-radius: 15px;
+    border-radius: var(--round-corners);
     max-width: 400px;
     height: 400px;
     object-fit: cover;
@@ -367,7 +393,7 @@ label {
 
 .about-blog p{
     padding-bottom: 10px;
-    text-align: justify;
+    /* text-align: justify; */
 }
 
 
@@ -416,7 +442,6 @@ table .filled {
 
 
 
-/*THAT'S ALL FOR TONIGHT BYEEEEEEEEE; 17/11/2023*/
 
 
 
@@ -475,7 +500,7 @@ header {
     /* HEADER POSITIONING ON CANVAS DO NOT CHANGE */
     position: fixed;
     top: 0; left: 0;
-    width: calc(100% - 40px);
+    width: 100%;
     z-index: 1000;
     
     /* HEADER DESIGN COLORS DO NOT CHANGE */
@@ -484,12 +509,22 @@ header {
     backdrop-filter: blur(7px);
     white-space: nowrap;
 
+    padding-bottom: 7px;
+}
+
+header .header-max-width {
+    max-width: var(--device-width);
 
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-
-    padding: 5px 20px 10px;
+    justify-content: space-between;
+    
+    margin: var(--set-margin);
+    padding: var(--set-padding);
+    
+    white-space: normal;
+    
+    text-align: end;
 }
 
 nav a {
@@ -504,7 +539,7 @@ nav a {
     
     border: 1px solid grey;
     border-radius: 20px;
-
+    
     position: relative;
     bottom: -2px;
 }
@@ -519,9 +554,65 @@ nav a {
 
 
 
-@media only screen and (max-width: 550px) {
-    .tech-gridConfig, .yt-flex { 
-        grid-template-columns: 1fr; }
+
+
+
+
+
+
+
+@media only screen and (max-width: 760px) {
+    
+    
+    
+    
+    
+    h6::after {
+        content: ".I.";
+    }
+    
+    
+    
+    .main-about {
+        display: block;
+    }
+    
+    
+    
+    .bodyOfIndex { 
+        background: var(--dark-gradient); 
+        color: whitesmoke;
+        height: 600px;
+        display: initial;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 100px;
+    }
+    .bodyOfIndex img {
+        position: fixed;
+        bottom: -40px;
+        right: -80px;
+    }
+    .index-contents { margin-top: 80px; }
+    .index-contents h1, .index-contents p { 
+        margin: 0; 
+        text-align: center;
+    }
+    .index-contents button { 
+        position: relative;
+        z-index: 3;
+        margin-top: 240px;
+        margin: 240px 20px 0; 
+    }
+    
+    
+    
+    .tech-h1-flex {
+        display: unset;
+        justify-content: unset; 
+        align-items: unset;
+    }
+    
 }
 
 
@@ -530,76 +621,54 @@ nav a {
 
 
 
-@media only screen and (max-width: 750px) {
 
 
 
 
 
-    body {
-        margin: 90px auto 20px;
+
+
+
+@media only screen and (max-width: 560px) {
+    
+
+
+    .main-index {
+        margin-top: 100px;
     }
-    h6 {
-        /* font-size: 40px; */
-        margin-right: 10px;
+    
+
+    
+    .tech-gridConfig, .yt-flex { grid-template-columns: 1fr; }
+    
+    .main-index {
+        display: block;
     }
-    h6::after {
-        content: ".I.";
-    }
-
-
-
-
-
-    .bodyOfIndex {
-        background: var(--dark-gradient);
-        color: whitesmoke;
-        margin: 120px auto 20px;
-    }
-    .bodyOfIndex p, .bodyOfIndex h1 { 
+    .main-index h1, .main-index p {
+        margin: 0;
         text-align: center;
-        margin: 0; 
     }
-    .bodyOfIndex button {
+    .main-index button {
         position: relative;
-        margin: 200px 0 0 8%;
         z-index: 3;
+        margin-top: 260px;
     }
-    .bodyOfIndex img{
+    .main-index img {
         position: fixed;
-        width: initial;
-        top: 255px;
-        left: 50%;
-        transform: translate(-30%, 0);
+        bottom: -40px;
+        right: -90px;
     }
 
+}
 
 
 
 
-
-    .tech-h1-flex {
-        display: unset;
-        justify-content: unset; 
-        align-items: unset;
+@keyframes compassSpin {
+    0% {
+        transform: rotate(0deg);
     }
-
-
-
-
-
-
-
-
-
-    header {
-        justify-content: space-between; 
-        text-align: right;
-        white-space: normal;
-        width: calc(100% - 40px);
-    }
-
-    nav a {
-        margin: 2.5px 0;
+    100% {
+        transform: rotate(360deg);
     }
 }
