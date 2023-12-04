@@ -83,47 +83,6 @@ class FiveRating extends HTMLElement {
 }
 
 
-class MyButton extends HTMLElement {
-    connectedCallback() {
-        const link = this.getAttribute('link');
-        const label = this.getAttribute('label');
-        const icons = this.getAttribute('icons');
-        const openNewTab = this.getAttribute('openNewTab') === 'true';
-        const isSocMed = this.getAttribute('isSocMed');
-
-        let buttonHTML = '';
-        
-        
-        if (openNewTab) {
-            buttonHTML += `<a href="` + link + `" target="_blank">`;
-            console.log('redirection: true')
-        }
-        else {
-            buttonHTML += `<a href="` + link + `"/>`;
-            console.log('redirection: false')
-        }
-        
-        
-        
-        if (isSocMed === "true") {
-            buttonHTML += `    <span class="`+ icons +`"></span>`;
-            console.log("isSocMed = true")
-            buttonHTML += `    <label>`+ label +`</label>`;
-        }
-        else {
-            buttonHTML += `    <label>`+ label +`</label>`;
-            console.log("isSocMed = false")
-            buttonHTML += `    <span class="material-symbols-outlined">`+ icons +`</span>`;
-        }
-        
-        buttonHTML += 
-        `
-        </a>
-        `
-
-        this.innerHTML = buttonHTML;
-    }
-}
 
 
 
@@ -134,7 +93,6 @@ customElements.define ('my-header', MyHeader)
 
 customElements.define ('my-footer', MyFooter)
 
-customElements.define ('my-button', MyButton)
 
 
 
