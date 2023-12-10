@@ -1,6 +1,5 @@
 const scripts = [
-    'https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js',
-    'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js'
+    'https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js'
 ];
 
 scripts.forEach(src => {
@@ -21,7 +20,7 @@ class MyHeader extends HTMLElement{
         this.innerHTML = `
         <!-- START COPY FROM HERE -->
         
-        <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+        <link rel="icon" type="image/x-icon" href="./favicon.ico">
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" 
         href="https://fonts.googleapis.com/css?family=Playfair+Display:b|JetBrains+Mono:b|Open+Sans">
