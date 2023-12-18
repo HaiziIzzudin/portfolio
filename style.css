@@ -53,6 +53,18 @@ main {
     animation: compassSpin 100s linear infinite;
 }
 
+video {
+    width: 100%;
+    max-width: var(--device-width);
+    margin: var(--set-margin);
+    border-radius: var(--round-corners);
+
+    display: block;
+    margin-top: var(--set-margin-top);
+    margin-bottom: var(--set-margin-top);
+
+    border: var(--border-typ);
+}
 
 
 
